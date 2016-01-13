@@ -36,19 +36,20 @@ var createTable =  function(){
   var table = document.createElement('table');
   var tableRow = document.createElement('tr');
   var tableHead = document.createElement('th');
-  tableHead.textContent = 'hours';
+  tableHead.textContent = 'Location';
   tableRow.appendChild(tableHead);
 
   for (var i = 0; i < hours.length; i++){
-    var tableData = document.createElement('td');
-    tableData.textContent = hours[i];
-    tableRow.appendChild(tableData);
+    var tableHeadHours = document.createElement('th');
+    tableHeadHours.textContent = hours[i];
+    tableRow.appendChild(tableHeadHours);
 
   }
     table.appendChild(tableRow);
 //    document.body.appendChild(table);
 
   for (var d = 0; d < shopList.length;d++){
+    var shopTotal = 0;
     var tableRow1 = document.createElement('tr');
     var tableHead1 = document.createElement('th');
     tableHead1.textContent = shopList[d].location;
@@ -56,12 +57,21 @@ var createTable =  function(){
 
     for (var i = 0; i < hours.length; i++){
       var tableData1 = document.createElement('td');
-      tableData1.textContent = shopList[d].totalPounds().toFixed(2);
+      var hourlyTotal = shopList[d].totalPounds();
+      shopTotal += hourlyTotal;
+      tableData1.textContent = hourlyTotal.toFixed(2);
       tableRow1.appendChild(tableData1);
       console.log(i);
     }
+
+      var tableData2 = document.createElement('td');
+      tableData2.textContent = shopTotal.toFixed(2);
+      tableRow1.appendChild(tableData2);
       table.appendChild(tableRow1);
     }
+    var tableHead = document.createElement('th');
+    tableHead.textContent = 'Total Daily Lbs.';
+    tableRow.appendChild(tableHead);
       document.body.appendChild(table);
 };
 
