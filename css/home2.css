@@ -47,7 +47,17 @@ border: solid;
   background-image: url("http://blog.chefsteps.com/wp-content/uploads/2012/12/ChefSteps-Pike-Place-Market-610x377.jpg");
   background-size: cover;
 }
+ul {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: -3px;
+}
 li {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.nav {
   display: inline;
   border: solid;
   border-radius: 5px;
