@@ -1,0 +1,91 @@
+a {
+  color:black;
+  text-decoration: none;
+  font-style: oblique;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: green;
+}
+a:active {
+  color: blue;
+}
+h3 {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.col-1-2 {
+  display:inline;
+  width: 45%;
+  float: left;
+  padding: 10px;
+  background-color: green;
+  border: solid;
+  position:relative;
+}
+.col-1-1 {
+padding: 10px;
+background-color: blue;
+clear:both;
+border: solid;
+}
+#topright {
+  height: 250px;
+}
+#bottomright {
+  height: 250px;
+  background-image: url("http://www.eopugetsound.org/sites/default/files/topical_article/images/Airport_140429_046.jpg");
+  background-size: cover;
+}
+#bottomleft {
+  height:250px;
+}
+#topleft {
+  height:250px;
+  background-image: url("http://blog.chefsteps.com/wp-content/uploads/2012/12/ChefSteps-Pike-Place-Market-610x377.jpg");
+  background-size: cover;
+}
+ul {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: -3px;
+}
+li {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.nav {
+  display: inline;
+  border: solid;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  font-weight: bold;
+  font-family:sans-serif;
+  background-color: white;
+}
+#logo {
+  float:right;
+  margin-top:-120px;
+  margin-right: 275px;
+}
+#name {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#phrase {
+  float: right;
+  margin-right: -320px;
+  margin-top: -100px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#footertextright {
+  float:right;
+  margin-top: -50px;
+}
+body {
+  background-color: brown;
+}

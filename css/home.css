@@ -1,0 +1,81 @@
+a {
+  color:black;
+  text-decoration: none;
+  font-style: oblique;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: green;
+}
+a:active {
+  color: blue;
+}
+h3 {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.col-1-2 {
+  display:inline;
+  width: 45%;
+  float: left;
+  padding: 10px;
+  background-color: green;
+  border: solid;
+  position:relative;
+}
+.col-1-1 {
+padding: 10px;
+background-color: blue;
+clear:both;
+border: solid;
+}
+#topleft {
+  height: 250px;
+}
+#bottomleft {
+  height: 250px;
+  background-image: url("http://www.mountainphotography.com/images/large/201304_catalina-parsons-landing-campfire.jpg");
+  background-size: cover;
+}
+#bottomright {
+  height:250px;
+}
+#topright {
+  height:250px;
+  background-image: url("http://fortheloveofwanderlust.com/wp-content/uploads/2014/08/campfire6.jpg");
+  background-size: cover;
+}
+li {
+  display: inline;
+  border: solid;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  font-weight: bold;
+  font-family:sans-serif;
+  background-color: white;
+}
+#logo {
+  float:right;
+  margin-top:-120px;
+  margin-right: 275px;
+}
+#name {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#phrase {
+  float: right;
+  margin-right: -320px;
+  margin-top: -100px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#footertextright {
+  float:right;
+  margin-top: -50px;
+}
+body {
+  background-color: brown;
+}
