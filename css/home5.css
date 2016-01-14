@@ -1,22 +1,3 @@
-span1 {
-  font-family: monospace;
-  font-weight: bold;
-}
-span {
-  font-family: sans-serif;
-  font-size: 17px;
-}
-.loc {
-  font-size: 1em;
-  font-family: serif;
-  margin-left:-30px;
-}
-.loc1 {
-  font-size: 1em;
-  font-family: serif;
-  font-weight: lighter;
-  margin-left: -20px;
-}
 a {
   color:black;
   text-decoration: none;
@@ -50,33 +31,27 @@ background-color: blue;
 clear:both;
 border: solid;
 }
-#topright {
+#topleft {
   height: 250px;
-}
-#bottomright {
-  height: 250px;
-  background-image: url("http://www.eopugetsound.org/sites/default/files/topical_article/images/Airport_140429_046.jpg");
-  background-size: cover;
 }
 #bottomleft {
+  height: 250px;
+  background-image: url("http://www.yankodesign.com/images/design_news/2011/03/16/mugs.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#bottomright {
   height:250px;
 }
-#topleft {
+#topright {
   height:250px;
-  background-image: url("http://blog.chefsteps.com/wp-content/uploads/2012/12/ChefSteps-Pike-Place-Market-610x377.jpg");
-  background-size: cover;
-}
-ul {
-  font-weight: bold;
-  font-family: sans-serif;
-  margin-top: -3px;
+  background-image: url("http://g01.s.alicdn.com/kf/HTB10yg4JFXXXXc9XpXXq6xXFXXXy/2015-Plan-white-Blank-T-Shirt-China.jpg_350x350.jpg");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 li {
-  font-weight: bold;
-  font-family: sans-serif;
-  margin-top: 2px;
-}
-.nav {
   display: inline;
   border: solid;
   border-radius: 5px;
@@ -84,6 +59,16 @@ li {
   font-weight: bold;
   font-family:sans-serif;
   background-color: white;
+}
+span3 {
+  margin-top:-50px,
+}
+.merch {
+  display: inline-block;
+  margin-left: -20px,
+  margin-top: 500px;
+  position:relative;
+  background-color: grey;
 }
 #logo {
   float:right;
