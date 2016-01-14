@@ -1,1 +1,82 @@
-/* my css will be in here */
+th {
+  background-color: blue;
+  border-style: solid;
+  border-width: 2px;
+}
+h3 {
+  margin-top: -60px;
+}
+table {
+  border: solid;
+  border-width: 5px;
+  background-color: beige;
+}
+td {
+  border: solid;
+  border-width: 1px;
+  background-color: teal;
+}
+div {
+  height: 50px;
+  width: 100%;
+  background-color: brown;
+  position:block;
+}
+ul{
+  margin-left:-40px;
+}
+a {
+  color:black;
+}
+a:hover{
+  color:blue;
+}
+a:visited{
+  color:black;
+}
+li {
+  display: inline-block;
+  margin-top: 40px;
+  border: solid;
+  border-width:2px;
+  border-radius:5px;
+  background-color: white;
+  padding-left:50px;
+  padding-right:50px;
+  padding-top:3px;
+  padding-bottom: 3px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+#header {
+  position: fixed;
+  height:80px;
+  margin-top: -20px;
+  border: solid;
+  border-width: 5px;
+  border-radius: 25px;
+}
+ #left {
+   height:700px;
+   width:17%;
+   float: left;
+   background-color: teal;
+   background-image: url("http://images.all-free-download.com/images/graphiclarge/vector_coffee_beans_background_158036.jpg");
+   border-style: outset;
+   border-width: 5px;
+ }
+ #right {
+   height:700px;
+   width: 80%;
+   float: right;
+   background-image: url("https://github.com/codefellows/sea-201d5/blob/master/week-2/assets/campfire-coffee.jpg?raw=true");
+   background-size:100% 100%;
+   border-style: inset;
+   border-width: 5px;
+ }
+ #footer {
+   clear: both;
+   border: solid;
+   border-width: 5px;
+   border-radius: 10px;
+ }
