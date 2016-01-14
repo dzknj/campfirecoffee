@@ -57,6 +57,8 @@ border: solid;
   height: 250px;
   background-image: url("http://www.eopugetsound.org/sites/default/files/topical_article/images/Airport_140429_046.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #bottomleft {
   height:250px;
@@ -65,6 +67,8 @@ border: solid;
   height:250px;
   background-image: url("http://blog.chefsteps.com/wp-content/uploads/2012/12/ChefSteps-Pike-Place-Market-610x377.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 ul {
   font-weight: bold;

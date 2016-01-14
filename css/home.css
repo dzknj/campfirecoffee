@@ -38,6 +38,8 @@ border: solid;
   height: 250px;
   background-image: url("http://www.mountainphotography.com/images/large/201304_catalina-parsons-landing-campfire.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #bottomright {
   height:250px;
@@ -46,6 +48,8 @@ border: solid;
   height:250px;
   background-image: url("http://fortheloveofwanderlust.com/wp-content/uploads/2014/08/campfire6.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 li {
   display: inline;
