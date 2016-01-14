@@ -59,7 +59,9 @@ border: solid;
 #bottomleft {
   height: 250px;
   background-image: url("http://blog.bikehike.com/wp-content/uploads/2011/12/Favorite-Brands.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
 }
 #bottomright {
   height:250px;
@@ -67,7 +69,9 @@ border: solid;
 #topright {
   height:250px;
   background-image: url("http://springsbargains.com/wp-content/uploads/2010/10/rei-coupon.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
 }
 li {
   display: inline;
