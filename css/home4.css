@@ -76,6 +76,27 @@ li {
   float:right;
   margin-top: -50px;
 }
+table {
+  border: solid;
+  border-width: medium;
+background-color: green;
+}
+th {
+  border: solid;
+  border-width: thin;
+  font-family: sans-serif;
+  background-color: teal;
+}
+tr {
+  border: solid;
+  background-color: teal;
+}
+td {
+  border: solid;
+  border-width: thin;
+  padding: 2px;
+  font-family: serif;
+}
 body {
   background-color: brown;
 }

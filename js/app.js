@@ -29,7 +29,7 @@ var ShopLocation = function(location,minCust,maxCust,cupsCust,poundsCust) {
       li.textContent = this.listHours[i] + " " + this.createListItem();
       ul.appendChild(li);
     }
-    document.body.appendChild(ul);
+    document.getElementById('poundsperday').appendChild(ul);
   };
 
 };
@@ -76,7 +76,7 @@ var createTable =  function(){
     var tableHead = document.createElement('th');
     tableHead.textContent = 'Total Daily Lbs.';
     tableRow.appendChild(tableHead);
-      document.body.appendChild(table);
+      document.getElementById('poundsperday').appendChild(table);
 };
 var createCustPerHourTable =  function(){
   var section = document.getElementById('test');
@@ -118,9 +118,9 @@ var createCustPerHourTable =  function(){
       table.appendChild(tableRow1);
     }
     var tableHead = document.createElement('th');
-    tableHead.textContent = 'Total Daily Lbs.';
+    tableHead.textContent = 'Total Customers Per Day';
     tableRow.appendChild(tableHead);
-      document.getElementById('customersperhour').appendChild(table);
+      document.getElementById('custperday').appendChild(table);
 };
 var createCupsPerHourTable =  function(){
   var section = document.getElementById('test');
@@ -149,7 +149,7 @@ var createCupsPerHourTable =  function(){
 
     for (var i = 0; i < hours.length; i++){
       var tableData1 = document.createElement('td');
-      var hourlyTotal = shopList[d].cupsPerCust;
+      var hourlyTotal = shopList[d].cupsPerCust *shopList[d].randomNumberOfCust();
       console.log(hourlyTotal);
       shopTotal += hourlyTotal;
       tableData1.textContent = hourlyTotal.toFixed(2);
@@ -165,7 +165,7 @@ var createCupsPerHourTable =  function(){
     var tableHead = document.createElement('th');
     tableHead.textContent = 'Total Daily Cups';
     tableRow.appendChild(tableHead);
-      document.getElementById('cupsperhour').appendChild(table);
+      document.getElementById('cupsperday').appendChild(table);
 };
 
 var pikePlaceMarket = new ShopLocation('Pike Place Market',14,55,1.2,3.7);
