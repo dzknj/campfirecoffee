@@ -1,4 +1,5 @@
 'use strict';
+var shopList =[];
 
 var ShopLocation = function(location,minCust,maxCust,cupsCust,poundsCust) {
   this.location = location;
@@ -7,6 +8,7 @@ var ShopLocation = function(location,minCust,maxCust,cupsCust,poundsCust) {
   this.cupsPerCust = cupsCust;
   this.poundsPerCust = poundsCust;
   this.listHours = ['6:00','7:00','8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00','4:00','5:00','6:00','7:00','8:00'];
+  shopList.push(this);
   this.randomNumberOfCust = function(){
     return Math.floor(Math.random()*((this.maxCustPerHour-this.minCustPerHour)+1)+this.minCustPerHour);
   };
@@ -35,6 +37,7 @@ var ShopLocation = function(location,minCust,maxCust,cupsCust,poundsCust) {
 };
 
 var createTable =  function(){
+  document.getElementById('poundsperday').innerHTML= ' ';
   var section = document.getElementById('test');
   var hours = ['6:00','7:00','8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00','4:00','5:00','6:00','7:00','8:00'];
   var table = document.createElement('table');
@@ -65,7 +68,7 @@ var createTable =  function(){
       shopTotal += hourlyTotal;
       tableData1.textContent = hourlyTotal.toFixed(2);
       tableRow1.appendChild(tableData1);
-      console.log(i);
+    //  console.log(i);
     }
 
       var tableData2 = document.createElement('td');
@@ -79,6 +82,7 @@ var createTable =  function(){
       document.getElementById('poundsperday').appendChild(table);
 };
 var createCustPerHourTable =  function(){
+  document.getElementById('custperday').innerHTML= ' ';
   var section = document.getElementById('test');
   var hours = ['6:00','7:00','8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00','4:00','5:00','6:00','7:00','8:00'];
   var table = document.createElement('table');
@@ -109,7 +113,7 @@ var createCustPerHourTable =  function(){
       shopTotal += hourlyTotal;
       tableData1.textContent = hourlyTotal.toFixed(2);
       tableRow1.appendChild(tableData1);
-      console.log(i);
+    //  console.log(i);
     }
 
       var tableData2 = document.createElement('td');
@@ -123,6 +127,7 @@ var createCustPerHourTable =  function(){
       document.getElementById('custperday').appendChild(table);
 };
 var createCupsPerHourTable =  function(){
+    document.getElementById('cupsperday').innerHTML= ' ';
   var section = document.getElementById('test');
   var hours = ['6:00','7:00','8:00','9:00','10:00','11:00','12:00','1:00','2:00','3:00','4:00','5:00','6:00','7:00','8:00'];
   var table = document.createElement('table');
@@ -150,11 +155,11 @@ var createCupsPerHourTable =  function(){
     for (var i = 0; i < hours.length; i++){
       var tableData1 = document.createElement('td');
       var hourlyTotal = shopList[d].cupsPerCust *shopList[d].randomNumberOfCust();
-      console.log(hourlyTotal);
+    //  console.log(hourlyTotal);
       shopTotal += hourlyTotal;
       tableData1.textContent = hourlyTotal.toFixed(2);
       tableRow1.appendChild(tableData1);
-      console.log(i);
+    //  console.log(i);
     }
 
       var tableData2 = document.createElement('td');
@@ -175,10 +180,66 @@ var southLake = new ShopLocation('SouthLake',35,88,1.3,3.7);
 var seaTac = new ShopLocation('Sea-Tac',68,124,1.1,2.7);
 var website = new ShopLocation('Website',3,6,0,6.7);
 
-var shopList =[pikePlaceMarket,capitolHill,seattlePublic,southLake,seaTac,website];
+//var shopList =[pikePlaceMarket,capitolHill,seattlePublic,southLake,seaTac,website];
+
 createTable();
 createCustPerHourTable();
 createCupsPerHourTable();
+
+
+ShopLocation.prototype.render = function() {
+  var liA = document.createElement('th');
+  var liR = document.createElement('tr');
+
+  liA.innerHTML = this.location + this.minCustPerHour + this.maxCustPerHour + this.cupsPerCust + this.poundsPerCust;
+  return liA;
+
+
+};
+//variables for DOM access
+
+var newshoplocations = document.getElementById('newshoplocations');
+var newShopData = [];
+
+var renderNewShops = function() {
+    addNewShop.innerHTML = ' ';
+    newShopData.forEach(function(ShopLocation) {
+      addNewShop.appendChild(ShopLocation.render());
+      });
+};
+
+function handleAddNewShop(event) {
+  console.log(event);
+  event.preventDefault(); //prevents page reload
+
+  if (!event.target.location.value || !event.target.minCust.value || !event.target.maxCust.value || !event.target.cupsCust.value || !event.target.poundsCust.value) {
+    return alert('Fields Cannot Be Empty');
+  }
+  var nLoc = event.target.location.value;
+  var nLocMinCust = parseInt(event.target.minCust.value);
+  var nLocMaxCust = parseInt(event.target.maxCust.value);
+  var nLocCupsCust = parseFloat(event.target.cupsCust.value);
+  var nLocPoundsCust = parseFloat(event.target.poundsCust.value);
+
+
+  var newShopLocation = new ShopLocation(nLoc, nLocMinCust, nLocMaxCust, nLocCupsCust, nLocPoundsCust);
+console.log(newShopLocation);
+
+  console.log('Location: ' + event.target.location.value + ' Minimum Customers per Hour: ' + event.target.minCust.value + ' Maximum Customers per Hour: ' + event.target.maxCust.value + ' Cups per each Customer: ' + event.target.cupsCust.value + ' Pounds per Customer: ' + event.target.poundsCust.value);
+  newShopLocation.randomNumberOfCust();
+  console.log(newShopLocation.randomNumberOfCust());
+  newShopLocation.cupsPerHour();
+  console.log(newShopLocation.cupsPerHour());
+  newShopLocation.totalPounds();
+console.log(newShopLocation.totalPounds());
+  createTable();
+  createCustPerHourTable();
+  createCupsPerHourTable();
+
+}
+var addNewShop = document.getElementById('newShop');
+
+addNewShop.addEventListener('submit', handleAddNewShop);
 
 /*function tableHours(){
   var section = document.getElementById('test');
