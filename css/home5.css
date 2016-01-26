@@ -36,7 +36,7 @@ border: solid;
 }
 #bottomleft {
   height: 250px;
-  background-image: url("http://www.yankodesign.com/images/design_news/2011/03/16/mugs.jpg");
+  background-image: url("../img/mugs.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,7 +46,7 @@ border: solid;
 }
 #topright {
   height:250px;
-  background-image: url("http://g01.s.alicdn.com/kf/HTB10yg4JFXXXXc9XpXXq6xXFXXXy/2015-Plan-white-Blank-T-Shirt-China.jpg_350x350.jpg");
+  background-image: url("../img/shirts.jpg");
   background-size:contain;
   background-repeat: no-repeat;
   background-position: center;

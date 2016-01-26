@@ -21,6 +21,7 @@ h3 {
 }
 .col-1-2 {
   display:inline;
+  height: 250px;
   width: 45%;
   float: left;
   padding: 10px;
@@ -39,7 +40,7 @@ border: solid;
 }
 #bottomleft {
   height: 250px;
-  background-image: url("http://www.mountainphotography.com/images/large/201304_catalina-parsons-landing-campfire.jpg");
+  background-image: url("../img/campfire.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,7 +50,7 @@ border: solid;
 }
 #topright {
   height:250px;
-  background-image: url("http://fortheloveofwanderlust.com/wp-content/uploads/2014/08/campfire6.jpg");
+  background-image: url("../img/coffeefire.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
